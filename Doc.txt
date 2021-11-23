@@ -1,0 +1,6 @@
+in this we are going to implement reset password through link. In this case we need some token which we can store in database and send mail iwth reset link and token attached to it. So, when user resets the password through link we will verify that token with one stored in DB. This is a kind of security mechanism we are going to implement.
+
+To create a token we will use "crypto" library which is built-in in Node.js. "Crypto" helps us create unique and secure random values.
+We use this random value as a token and compare while performing password reset operation. SO that we can protect it from unintended users.
+
+also we implemented authorization here in which user has permission to edit and delete only those products which they owns. Simply not showing those products not solve the problem here so in POST calls of delete and edit also needs to be handled and we need to check there request is coming from owner of that product only. 
